@@ -48,11 +48,12 @@ program
 
     try {
 
-      const myQuote = `${quote | author}`
-      
       if (!author) {
-        console.log(author = `Anonymous`)
+        author = `Anonymous`
       }
+
+      const myQuote = `${quote} | ${author} \n`
+  
 
       await fs.appendFile('./quotes.txt', myQuote)
       console.log(`${chalk.green("Quote added!")}`)
